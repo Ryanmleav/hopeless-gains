@@ -48,7 +48,7 @@ module.exports = {
     const { id } = req.params
 
     try {
-      const cart = await db.cart.delete_product_in_cart(+id)
+      const cart = await db.cart.delete_product_from_cart(+id)
       res.status(200).send(cart)
     } catch (err) {
       console.log(`Could not delete item in cart`, err)

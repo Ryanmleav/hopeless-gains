@@ -7,13 +7,18 @@ const userCtrl = require('./controllers/users')
 const productCtrl = require('./controllers/products')
 const cartCtrl = require('./controllers/cart')
 const emailCtrl = require('./controllers/email');
+const { checkUser } = require('./controllers/middleware')
+const stripeCtrl = require('./controllers/stripe')
 
 
-const { SERVER_PORT, CONNECTION_STRING, SESSION_SECRET } = process.env;
+const { SERVER_PORT, CONNECTION_STRING, SESSION_SECRET, SECRET_KEY } = process.env;
+const stripe = require('stripe')(SECRET_KEY);
+
 
 const app = express();
 
 app.use(express.json());
+app.set('stripe', stripe)
 
 app.use(session({
   resave: false,
@@ -35,7 +40,26 @@ massive({
 })
   .catch(err => console.log(err));
 
+//ENDPOINTS - USER
+app.post('/auth/register', userCtrl.registerUser)
+app.post('/auth/login', userCtrl.loginUser)
+app.post('/auth/logout', userCtrl.logoutUser)
+app.get('/auth/me', checkUser, userCtrl.getUser)
+
+//ENDPOINTS - PRODUCTS
+app.get('/products', productCtrl.getAllProducts)
+app.get('/products/:id', productCtrl.getOneProduct)
+
+//ENDPOINTS - CART
+app.get('/api/cart/me', cartCtrl.getCartByUser)
+app.post('/api/cart/product/:id', cartCtrl.addProductToCart)
+app.put('/api/cart/product/:id', cartCtrl.editProductInCart)
+app.delete('/api/cart/product/:id', cartCtrl.deleteProductInCart)
+
 //NODEMAILER
 app.post('/api/email', emailCtrl.email)
+
+//STRIPE
+app.post('/api/payment', stripeCtrl.makePayment)
 
 
