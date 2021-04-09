@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import StripeCheckout from "react-stripe-checkout"
 import axios from "axios"
 import React, { Component } from 'react'
-const { REACT_APP_STRIPE_KEY } = process.env
+
 
 class Checkout extends Component {
   constructor(props) {

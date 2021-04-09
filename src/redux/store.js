@@ -8,4 +8,4 @@ const rootreducer = combineReducers({
   user: userReducer
 })
 
-export default createStore(rootReducer, applyMiddleware(promiseMiddleware))
+export default createStore(rootreducer, applyMiddleware(promiseMiddleware))

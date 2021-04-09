@@ -1,8 +1,9 @@
+import React from 'react'
 import { useState } from 'react';
 import { getUser } from '../redux/userReducer';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
-import { connect } from 'eact-redux'
+import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
 
 const Register = ({ getUser }) => {
@@ -39,7 +40,7 @@ const Register = ({ getUser }) => {
       console.log(err)
     }
   }
-}
+
 const changeHandler = e => setState({ ...state, [e.target.name]: e.target.value })
 
 return (
@@ -108,5 +109,6 @@ return (
     </form>
   </div>
 );
+}
 const mapStateToProps = (state) => state
 export default connect(mapStateToProps, { getUser })(Register);
