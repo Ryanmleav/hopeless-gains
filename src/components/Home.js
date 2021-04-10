@@ -1,3 +1,19 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-export default () => <h1>home</h1>
+const Home = (props) => {
+
+
+  return (
+    <div className='home-page'>
+      <h1 className='home-page-title'>HOPELESS GAINS</h1>
+      <p className='about-us'></p>
+    </div>
+  )
+
+
+
+
+}
+
+export default Home
