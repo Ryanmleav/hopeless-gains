@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useState } from "react"
 import { logoutUser } from '../redux/userReducer'
+import {connect} from 'react-redux'
 
 const Nav = ({ logoutUser, user }) => {
 
