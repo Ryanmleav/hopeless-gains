@@ -29,11 +29,15 @@ const Nav = ({ logoutUser, user }) => {
       <div className='nav-cart-dropdown'>
         <button onClick={cartDropdown} className='cart-dropdown' >☰</button>
         {toggle ?
-          <div className='dropdown-content'>
-            <Link onClick={() => { setToggle(!toggle) }} className='dropdown-link' to={`/checkout`}>Check Out</Link>
-            <Link onClick={() => { setToggle(!toggle) }} className='dropdown-link' to={`/cart`}>Cart</Link>
-            <Link onClick={() => { setToggle(!toggle) }} className='dropdown-link' to={`/email`}>Contact Us</Link>
-          </div>
+          <ul className='dropdown-content'>
+            <li>
+           <Link onClick={() => { setToggle(!toggle) }} className='dropdown-link' to={`/checkout`}>Check Out</Link>
+           </li>
+            <li><Link onClick={() => { setToggle(!toggle) }} className='dropdown-link' to={`/cart`}>Cart</Link>
+            </li>
+            <li><Link onClick={() => { setToggle(!toggle) }} className='dropdown-link' to={`/email`}>Contact Us</Link>
+            </li>
+          </ul>
           : null}
       </div>
 

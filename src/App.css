@@ -11,17 +11,31 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  text-decoration: none;
 
 }
 .dashboard-button {
-  color: whitesmoke;
+  color: rgb(7, 214, 24);
+  text-decoration: none;
+  font-size: 19px;
 }
 .dropdown-link {
-  color: #0471e3;
+  color: #0359f8;
+  text-decoration: none;
+}
+
+.cart-dropdown {
+  background-color: transparent;
+  color: whitesmoke;
+  border: none;
+  font-size: 26px;
 }
 
 .home-page-title {
   color: whitesmoke;
+  font-family: Carnivalee Freakshow;
+  font-size: 30px;
+  letter-spacing: 3px;
 }
 .home-page{
   padding-left: 7px;
@@ -33,7 +47,25 @@ body{
 }
 .about-us{
   color:rgb(252, 249, 249);
-  font-size: 19px;
- 
+  font-size: 26px;
+  line-height: 39px;
+  font-family: Norse;
+  font-weight: 500;
+ }
 
+ .dropdown-content {
+  background-color: rgb(253, 251, 251);
+  min-width: 160px;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: inline-block;
+  z-index: 1;
+  position: absolute;
+  
+}
+
+ul {
+  list-style-type: none;
+  padding-top: 39px;
+  text-decoration: none;
 }
