@@ -3,3 +3,9 @@ FROM products p
 JOIN product_color c ON p.product_id = c.product_id
 JOIN product_size s ON p.product_id = s.product_id
 JOIN product_pictures pic ON c.color_id = pic.color_id
+WHERE product_id = $1
+
+-- GET ONE PRODUCT IS ABOVE SELECT ALL PRODUCTS WHERE ID = $1
+ 
+
+--  change to SELECT all from  products

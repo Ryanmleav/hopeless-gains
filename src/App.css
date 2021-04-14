@@ -24,6 +24,9 @@ body{
   text-decoration: none;
 }
 
+.nav-cart-dropdown {
+  position:relative;
+}
 .cart-dropdown {
   background-color: transparent;
   color: whitesmoke;
@@ -57,6 +60,9 @@ body{
   background-color: rgb(253, 251, 251);
   min-width: 160px;
   padding: 12px 16px;
+  margin-top: 52px;
+  margin-right: 39px;
+  margin-left: -39px;
   text-decoration: none;
   display: inline-block;
   z-index: 1;
@@ -66,6 +72,5 @@ body{
 
 ul {
   list-style-type: none;
-  padding-top: 39px;
   text-decoration: none;
 }
