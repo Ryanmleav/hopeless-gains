@@ -4,7 +4,7 @@ first_name VARCHAR(100),
 last_name VARCHAR(100),
 email VARCHAR(100),
 password VARCHAR(100),
-phone_number INTEGER
+phone_number BIGINT
 );
 
 CREATE TABLE products (
@@ -37,7 +37,6 @@ CREATE TABLE product_pictures (
   picture_id SERIAL PRIMARY KEY,
   img VARCHAR(255),
   color_id INT REFERENCES product_color(color_id)
-
 )
 
 CREATE TABLE product_color (

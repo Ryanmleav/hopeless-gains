@@ -47,10 +47,8 @@ const Register = ({ getUser }) => {
     <div>
       <div className="register-nav-bar">
         <div className="register-nav-bar-left">
-          <h3> Email </h3>
         </div>
         <div className="register-nav-bar-right">
-          <h6>Sign In</h6>
           <h6>Create Your Account</h6>
         </div>
       </div>
@@ -59,7 +57,6 @@ const Register = ({ getUser }) => {
       </div>
       <form onSubmit={(e) => registerUser(e)}>
         <div className="register-form-text">
-          <p>Already have a Hopeless Gains Account? Find it here</p>
         </div>
         <div className="register-name-input">
           <input

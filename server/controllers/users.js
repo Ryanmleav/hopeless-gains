@@ -3,7 +3,9 @@ const bcrypt = require('bcryptjs')
 module.exports = {
   registerUser: async (req, res) => {
     const db = req.app.get('db')
-    const { firstName, lastName, email, password, phoneNumber } = req.body
+    let { firstName, lastName, email, password, phoneNumber } = req.body
+    phoneNumber = parseInt(phoneNumber)
+    console.log(typeof phoneNumber, phoneNumber)
     try {
       const [foundUser] = await db.user.get_user(email)
       if (foundUser) {
@@ -25,7 +27,7 @@ module.exports = {
   loginUser: async (req, res) => {
     const db = req.app.get('db')
     const { email, password } = req.body
-
+console.log(req.body)
     try {
       const [foundUser] = await db.user.get_user(email)
       if (foundUser) {

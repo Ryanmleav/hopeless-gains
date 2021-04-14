@@ -15,10 +15,10 @@ const Auth = ({ getUser }) => {
 
   const loginUser = async (e) => {
     e.preventDefault()
-    const { email, paswword } = state
+    const { email, password } = state
 
     try {
-      const user = await axios.post('/auth/login', { email, paswword })
+      const user = await axios.post('/auth/login', { email, password })
       getUser(user.data)
       history.push('/')
     } catch (err) {
