@@ -33,6 +33,7 @@ class Email extends Component {
 
   render() {
     const { name, email, message, title} = this.state
+    
     return (
       <div style={styles.body}>
         <div style={styles.form}>
@@ -47,6 +48,7 @@ class Email extends Component {
     )
   }
 }
+
 
 export default Email;
 

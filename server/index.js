@@ -47,7 +47,7 @@ app.post('/auth/logout', userCtrl.logoutUser)
 app.get('/auth/me', checkUser, userCtrl.getUser)
 
 //ENDPOINTS - PRODUCTS
-app.get('/products', productCtrl.getAllProducts)
+app.get('/api/products', productCtrl.getAllProducts)
 app.get('/products/:id', productCtrl.getOneProduct)
 
 //ENDPOINTS - CART

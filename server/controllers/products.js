@@ -3,7 +3,11 @@ module.exports = {
     const db = req.app.get('db');
     const products = await db.products.get_all_products();
     console.log(products)
+    if (products) {
     res.status(200).send(products)
+    } else {
+      res.status(400).send('products not found')
+    }
   },
 
   getOneProduct: async (req, res) => {

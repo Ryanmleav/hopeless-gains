@@ -74,8 +74,8 @@ const Cart = (props) => {
   }
   return (
     <div className='cart-component'>
-      <h1 className='cart-review-text'>Swag in your cart</h1>
-      <h4 className='cart-return-text'>Free delivery and free returns.</h4>
+      <h1 className='cart-review-text'>Swag List</h1>
+      <h4 className='cart-return-text'>Free delivery and returns</h4>
       <ul style={{ listStyle: 'none' }}>{mappedCart}</ul>
       <div className='cart-total'>
         <div className='cart-total-text'>Total:</div>

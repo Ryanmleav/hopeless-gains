@@ -1,38 +1,39 @@
-.App {
-  text-align: center;
+body{
+  background-image: url('https://cdn.pixabay.com/photo/2016/12/04/22/15/fitness-1882721_1280.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+.nav-component {
+  height: 8vh;
+  width: 100vw;
+  background-color: #333333;
+  /* background-color: #060606; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+.dashboard-button {
+  color: whitesmoke;
+}
+.dropdown-link {
+  color: #0471e3;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home-page-title {
+  color: whitesmoke;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home-page{
+  padding-left: 7px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  align-items: left;
+  justify-content: space-evenly;
 
-.App-link {
-  color: #61dafb;
 }
+.about-us{
+  color:rgb(252, 249, 249);
+  font-size: 19px;
+ 
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
