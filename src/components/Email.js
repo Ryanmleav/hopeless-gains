@@ -54,42 +54,48 @@ export default Email;
 
 const styles = {
   body:{
-    background:'lightgrey',
+    background:'none',
     height:'100vh',
     display:'flex',
-    alignItems:'center',
-    justifyContent:'center'
+    alignItems:'top',
+    justifyContent:'left',
+    marginLeft:'5px',
+    marginTop: '13px'
   },
   form:{
     display:'flex',
     flexDirection:'column',
-    background:'#00000090',
+    background:'#001eff5d',
     width:500,
     alignItems:'center',
-    height:500,
+    height:450,
     justifyContent:'space-evenly',
-    borderRadius:10
+    borderRadius:10,
   },
   header:{
-    fontSize:60,
+    fontFamily: 'Norse',
+    fontSize:52,
     margin:0,
     color:'white',
+    opacity:'none',
     letterSpacing:'0.07em',
-    fontWeight:'bold'
+    fontWeight:'bold',
   },
   input:{
     width:450,
-    height:50,
-    fontSize:35,
+    height:26,
+    fontSize:19,
     outline:'none'
   },
   button:{
-    width:200,
+    width:100,
     height:45,
+    border: 'none',
     borderRadius:10,
     background:'green',
-    fontSize:35,
+    fontSize:26,
     fontWeight:'bold',
-    letterSpacing:'0.07em'
-  }
+    letterSpacing:'0.06em',
+  },
+  
 }

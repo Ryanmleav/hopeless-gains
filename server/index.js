@@ -49,6 +49,7 @@ app.get('/auth/me', checkUser, userCtrl.getUser)
 //ENDPOINTS - PRODUCTS
 app.get('/api/products', productCtrl.getAllProducts)
 app.get('/products/:id', productCtrl.getOneProduct)
+app.get('/products/:id', productCtrl.getProductColor)
 
 //ENDPOINTS - CART
 app.get('/api/cart/me', cartCtrl.getCartByUser)

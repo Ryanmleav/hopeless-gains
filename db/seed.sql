@@ -38,6 +38,9 @@ CREATE TABLE product_pictures (
   img VARCHAR(255),
   color_id INT REFERENCES product_color(color_id)
 )
+INSERT INTO product_pictures(img, color_id)
+VALUES
+($1, $2)
 
 CREATE TABLE product_color (
   color_id SERIAL PRIMARY KEY,

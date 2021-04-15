@@ -74,3 +74,42 @@ ul {
   list-style-type: none;
   text-decoration: none;
 }
+
+.swag {
+ display: flex;
+ flex-direction: column;
+ width: 40vw;
+ height: 78vh;
+ align-items: center;
+ justify-content: space-evenly;
+ 
+}
+.swag-descr {
+  color: whitesmoke;
+  font-family: Carnivalee Freakshow;
+  font-size: 52px;
+  letter-spacing: 2px;
+  padding-top: 0;
+  margin-bottom: 0;
+}
+.swag-image {
+  height: 30vh;
+  width: 30vh
+}
+.swag-dropdown {
+  width: 20vw;
+  height: 26px;
+}
+.swag-color{
+  width: 20vw;
+  height: 26px;
+  
+}
+.add-swag {
+  background-color: green;
+  width: 13vw;
+  height: 5vh;
+  color: whitesmoke;
+  font-size: 26px;
+
+}
