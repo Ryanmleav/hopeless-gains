@@ -1,2 +1,2 @@
 DELETE FROM cart
-WHERE product_id = $1;
+WHERE color_id = $1;

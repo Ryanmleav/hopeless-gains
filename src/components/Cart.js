@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { useCallback, useEffect, useState } from "react";
 import { getCart } from '../redux/cartReducer'
 import axios from 'axios'
-import CartItem from './AddToCart'
+import AddToCart from './AddToCart'
 import { Link } from 'react-router-dom';
 import StripeCheckout from 'react-stripe-checkout';
 
@@ -26,11 +26,11 @@ const Cart = (props) => {
 
 
 
-  const editQuantity = async (product_id, quantity) => {
+  const editQuantity = async (color_id, quantity) => {
     // console.log(quantity)
     // console.log(product_id)
     try {
-      await axios.put(`/api/cart/product/${product_id}`, { quantity }
+      await axios.put(`/api/cart/product/${color_id}`, { quantity }
       )
       props.getCart()
     } catch (error) {
@@ -62,7 +62,7 @@ const Cart = (props) => {
   }, [props.cart.cart])
 
   const mappedCart = props.cart.cart.map((product) => {
-    return <CartItem
+    return <AddToCart
       // key={product.product_id} 
       product={product}
       deleteProduct={deleteProduct}
