@@ -105,6 +105,10 @@ ul {
   height: 26px;
   
 }
+.sizes-box {
+  width: 5vw;
+  height: 26px;
+}
 .add-swag {
   background-color: green;
   width: 13vw;
