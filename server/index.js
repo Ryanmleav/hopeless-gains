@@ -53,7 +53,7 @@ app.get('/products/color/:id', productCtrl.getProductColor)
 
 //ENDPOINTS - CART
 app.get('/api/cart/me', cartCtrl.getCartByUser)
-app.post('/api/cart/product/:id', cartCtrl.addProductToCart)
+app.post('/api/cart/product', cartCtrl.addProductToCart)
 app.put('/api/cart/product/:id', cartCtrl.editProductInCart)
 app.delete('/api/cart/product/:id', cartCtrl.deleteProductInCart)
 

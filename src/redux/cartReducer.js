@@ -16,6 +16,8 @@ export function getCart() {
   }
 }
 
+
+
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case GET_CART + '_PENDING':

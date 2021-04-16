@@ -115,5 +115,7 @@ ul {
   height: 5vh;
   color: whitesmoke;
   font-size: 26px;
-
+}
+.hidden{
+  display: none;
 }

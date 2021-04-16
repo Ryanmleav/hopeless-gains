@@ -1,5 +1,5 @@
 const initialState = {
-  email: '',
+  user: null,
   isLoggedIn: false
 }
 
@@ -25,7 +25,7 @@ export default function reducer(state = initialState, action) {
     case GET_USER:
       return {
         ...state,
-        email: action.payload.email,
+        user: action.payload,
         isLoggedIn: true
       }
     case LOGOUT_USER:

@@ -4,7 +4,7 @@ module.exports = {
     const { user_id } = req.session.user
 
     try {
-      const cart = await db.cart.get_cart_by_user([+user_id])
+      const cart = await db.cart.get_cart_by_user([user_id])
       res.status(200).send(cart)
     } catch (err) {
       console.log('cart unavailable', err)
@@ -29,12 +29,11 @@ module.exports = {
 
   addProductToCart: async (req, res) => {
     const db = req.app.get('db')
-    const { id } = req.params
-    const { quanity } = req.body
+    const { colorId, quantity } = req.body
     const { user_id } = req.session.user
 
     try {
-      const cart = await db.cart.add_product_to_cart([+user_id, +id, +quanity])
+      const cart = await db.cart.add_product_to_cart([user_id, colorId, quantity])
       console.log('Success')
       res.status(200).send(cart)
     } catch (err) {

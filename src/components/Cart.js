@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { getCart } from '../redux/cartReducer'
 import axios from 'axios'
 import CartItem from './AddToCart'
@@ -8,25 +8,27 @@ import { Link } from 'react-router-dom';
 import StripeCheckout from 'react-stripe-checkout';
 
 const Cart = (props) => {
+  const { getCart } = props
+
 
   // const [quantity, setQuantity] = useState(1)
   const [cart, setCart] = useState([])
   // const [toggle, setToggle] = useState(false)
   const [cartTotal, setCartTotal] = useState(0)
 
-  const total = () => {
+  const total = useCallback(() => {
     let totalVal = 0;
     for (let i = 0; i < props.cart.cart.length; i++) {
       totalVal += props.cart.cart[i].product_price * props.cart.cart[i].quantity
     }
     setCartTotal(totalVal)
-  }
+  }, [props.cart.cart])
 
 
 
   const editQuantity = async (product_id, quantity) => {
-    console.log(quantity)
-    console.log(product_id)
+    // console.log(quantity)
+    // console.log(product_id)
     try {
       await axios.put(`/api/cart/product/${product_id}`, { quantity }
       )
@@ -52,7 +54,12 @@ const Cart = (props) => {
     console.log('HIT')
     props.getCart()
     total()
-  }, [JSON.stringify(props.cart.cart)])
+  }, [getCart])
+
+  useEffect(() => {
+    console.log(props.cart.cart)
+
+  }, [props.cart.cart])
 
   const mappedCart = props.cart.cart.map((product) => {
     return <CartItem

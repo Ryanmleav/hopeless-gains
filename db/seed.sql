@@ -26,10 +26,8 @@ VALUES
 
 CREATE TABLE cart (
 cart_id SERIAL PRIMARY KEY,
-user_id INT,
-product_id INT,
-FOREIGN KEY(user_id) REFERENCES users(user_id),
-FOREIGN KEY(product_id) REFERENCES products(product_id),
+user_id INT REFERENCES users(user_id),
+color_id INT REFERENCES product_color(color_id),
 quantity INTEGER
 );
 
