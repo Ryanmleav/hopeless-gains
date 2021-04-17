@@ -29,7 +29,7 @@ class Checkout extends Component {
 
         <div className="stripeCheckout">
           <StripeCheckout
-            description={"Apple Clone Demonstration"}
+            description={"Hopeless Gains demo"}
             token={this.onToken}
             stripeKey={process.env.REACT_APP_PUB_KEY}
             amount={(this.props.cartTotal)}

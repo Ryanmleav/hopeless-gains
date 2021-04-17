@@ -18,7 +18,7 @@ const CartItem = ({ product: { img, product_name, product_color, product_id, qua
   return (
     <div className="cart-product-info">
       <div>
-        <img className='cart-product-img' alt='' src={img} />
+        <img className='cart-product-img' alt='product' src={img} />
       </div>
       <h1 className='cart-product-name'>{product_name}</h1>
       <h2 className='cart-product-color'>{product_color}</h2>
