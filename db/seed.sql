@@ -9,20 +9,13 @@ phone_number BIGINT
 
 CREATE TABLE products (
 product_id SERIAL PRIMARY KEY,
-product_name VARCHAR(100),
-product_price INTEGER,
+product_name VARCHAR(100)
 );
+
 INSERT INTO products
-(product_name, product_price)
+(product_name)
 VALUES
 ($1, $2);
-
--- ALTER TABLE products
--- ADD img varchar(2000)
-
--- UPDATE products
--- SET img =''
--- WHERE product_id = 1
 
 CREATE TABLE cart (
 cart_id SERIAL PRIMARY KEY,
@@ -43,11 +36,12 @@ VALUES
 CREATE TABLE product_color (
   color_id SERIAL PRIMARY KEY,
   product_color VARCHAR (200),
+  product_price INTEGER,
   product_id INT REFERENCES products(product_id)
 )
-INSERT INTO product_color(product_color, product_id)
+INSERT INTO product_color(product_color, product_price ,product_id)
 VALUES
-($1, $2)
+($1, $2, $3)
 
 CREATE TABLE product_size (
   size_id SERIAL PRIMARY KEY,
