@@ -7,7 +7,7 @@ const Nav = ({ logoutUser, user }) => {
 
   const [toggle, setToggle] = useState(false)
 
-
+console.log(user)
   function cartDropdown() {
     setToggle(!toggle)
   }

@@ -23,6 +23,7 @@ export function logoutUser() {
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case GET_USER:
+      console.log('hit', action.payload)
       return {
         ...state,
         user: action.payload,
