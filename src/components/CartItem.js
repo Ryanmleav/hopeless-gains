@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-const AddToCart = (
+const CartItem= (
   props
   //   {
   //   product: {
@@ -11,22 +11,22 @@ const AddToCart = (
   //     product_price,
   //     product_size,
   //   },
-  //   deleteProduct,
+  // deleteProduct,
   //   editQuantity,
   // }
 ) => {
   const [toggle, setToggle] = useState(false);
-  const [quantity, setQuantity] = useState("1");
+  const [quantity, setQuantity] = useState(props.product.quantity);
   const [priceChange, setPriceChange] = useState("");
 
-  useEffect(() => {
-    // setPriceChange(product_price * quantity);
-  }, [quantity]);
+  // useEffect(() => {
+    // setPriceChange(props.product.product_price * quantity);
+  // }, [quantity]);
 
   useEffect(() => {
     // setQuantity(initialQuantity);
   }, []);
-  console.log(props);
+  // console.log(props.product);
   return (
     <div className="cart-product-info">
       <div>
@@ -36,7 +36,7 @@ const AddToCart = (
           src={props.product.img}
         />
       </div>
-      {/* <h3 className="cart-product-size">{product_size}</h3> */}
+      
       <div className="cart-product-quantity">
         {toggle ? (
           <div className="cart-quantity-options">
@@ -45,7 +45,7 @@ const AddToCart = (
                 <li
                   className="edit-quantity-dropdown"
                   key={`input: ${quantity}`}
-                >
+                > {console.log(quantity)}
                   <input
                     className="quanitiy"
                     type="button"
@@ -76,7 +76,7 @@ const AddToCart = (
       <div className="cart-remove-button">
         <button
           className="cart-item-remove-button"
-          // onClick={() => deleteProduct(product_id)}
+          onClick={() => props.deleteProduct(props.product.color_id)}
         >
           Remove
         </button>
@@ -84,4 +84,4 @@ const AddToCart = (
     </div>
   );
 };
-export default AddToCart;
+export default CartItem;

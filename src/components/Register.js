@@ -4,7 +4,7 @@ import { getUser } from "../redux/userReducer";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
+
 
 const Register = ({ getUser }) => {
   const [state, setState] = useState({

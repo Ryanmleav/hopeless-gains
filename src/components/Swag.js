@@ -8,7 +8,7 @@ function Swag(props) {
 
   // const [productId, setId] = useState("productId");
 
-  const [select, setSelect] = useState(false);
+  // const [select, setSelect] = useState(false);
 
   let [productList, setProductList] = useState([]);
 

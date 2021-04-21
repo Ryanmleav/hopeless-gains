@@ -8,7 +8,7 @@ const initialState = {
 const GET_CART = 'GET_CART';
 
 export function getCart() {
-  // console.log('slow')
+  console.log('slow')
   const cart = axios.get('/api/cart/me')
     .then(cart => cart.data)
   return {
