@@ -9,7 +9,8 @@ phone_number BIGINT
 
 CREATE TABLE products (
 product_id SERIAL PRIMARY KEY,
-product_name VARCHAR(100),
+product_name VARCHAR(100)
+);
 
 INSERT INTO products
 (product_name)
