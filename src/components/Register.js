@@ -1,33 +1,27 @@
-import React from 'react'
-import { useState } from 'react';
-import { getUser } from '../redux/userReducer';
-import axios from 'axios';
-import { useHistory } from 'react-router-dom';
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux';
+import React from "react";
+import { useState } from "react";
+import { getUser } from "../redux/userReducer";
+import axios from "axios";
+import { useHistory } from "react-router-dom";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 
 const Register = ({ getUser }) => {
   const [state, setState] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-    phoneNumber: '',
-  })
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    phoneNumber: "",
+  });
   const history = useHistory();
 
   const registerUser = async (e) => {
     e.preventDefault();
-    const {
-      firstName,
-      lastName,
-      email,
-      password,
-      phoneNumber,
-    } = state
+    const { firstName, lastName, email, password, phoneNumber } = state;
 
     try {
-      const user = await axios.post('/auth/register', {
+      const user = await axios.post("/auth/register", {
         firstName,
         lastName,
         email,
@@ -35,35 +29,36 @@ const Register = ({ getUser }) => {
         phoneNumber,
       });
       getUser(user.data);
-      history.push('/')
+      history.push("/");
     } catch (err) {
-      console.log(err)
+      console.log(err);
     }
-  }
+  };
 
-  const changeHandler = e => setState({ ...state, [e.target.name]: e.target.value })
+  const changeHandler = (e) =>
+    setState({ ...state, [e.target.name]: e.target.value });
 
   return (
     <div>
-      <div className="register-nav-bar">
+      {/* <div className="register-nav-bar">
         <div className="register-nav-bar-left">
         </div>
         <div className="register-nav-bar-right">
-          <h6>Create Your Account</h6>
         </div>
-      </div>
+      </div> */}
       <div className="register-header">
-        <h1 className="register-header-text">Create Your Hopeless Gains Account </h1>
+        <h1 className="register-header-text">
+          Create Your Hopeless Gains Account{" "}
+        </h1>
       </div>
       <form onSubmit={(e) => registerUser(e)}>
-        <div className="register-form-text">
-        </div>
+        <div className="register-form-text"></div>
         <div className="register-name-input">
           <input
             className="register-first-name"
             placeholder="First name"
             onChange={(e) => changeHandler(e)}
-            name='firstName'
+            name="firstName"
           />
           <input
             className="register-last-name"
@@ -76,12 +71,12 @@ const Register = ({ getUser }) => {
           <input
             placeholder="name@example.com"
             onChange={(e) => changeHandler(e)}
-            name='email'
+            name="email"
           />
           <input
             placeholder="Password"
             onChange={(e) => changeHandler(e)}
-            name='password'
+            name="password"
           />
         </div>
         <div className="register-phone-input">
@@ -89,18 +84,22 @@ const Register = ({ getUser }) => {
             placeholder="Phone number"
             type="number"
             onChange={(e) => changeHandler(e)}
-            name='phoneNumber'
+            name="phoneNumber"
           />
         </div>
         <div className="register-checkbox">
-          <p>Verify with:</p>
+          <p className='register-checkbox-text'>
+            Verify with: <br></br>
+            Email
+          </p>
           <input className="checkbox-email-message" type="checkbox" />
-          <p>Email message</p>
         </div>
-        <button className='register-button' type='submit'>Continue</button>
+        <button className="register-button" type="submit">
+          Continue
+        </button>
       </form>
     </div>
   );
-}
-const mapStateToProps = (state) => state
+};
+const mapStateToProps = (state) => state;
 export default connect(mapStateToProps, { getUser })(Register);

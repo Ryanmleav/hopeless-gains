@@ -50,7 +50,7 @@ const Auth = ({ getUser }) => {
         </section>
         <button className='sign-in-button' type='submit'>Sign in</button>
       </form>
-      <p className='auth-forgot'>Forgot your email or password</p>
+      
       <Link className='registration-link' to={'/register'}>No Hopeless Gains ID? Create one</Link>
     </div>
   )

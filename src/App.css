@@ -1,6 +1,6 @@
-body{
-  background-image: url('https://cdn.pixabay.com/photo/2016/12/04/22/15/fitness-1882721_1280.jpg');
-  background-size:cover;
+body {
+  background-image: url("https://cdn.pixabay.com/photo/2016/12/04/22/15/fitness-1882721_1280.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .nav-component {
@@ -12,7 +12,6 @@ body{
   align-items: center;
   justify-content: space-evenly;
   text-decoration: none;
-
 }
 .dashboard-button {
   color: rgb(7, 214, 24);
@@ -25,7 +24,7 @@ body{
 }
 
 .nav-cart-dropdown {
-  position:relative;
+  position: relative;
 }
 .cart-dropdown {
   background-color: transparent;
@@ -36,27 +35,75 @@ body{
 
 .home-page-title {
   color: whitesmoke;
-  font-family: Carnivalee Freakshow;
-  font-size: 30px;
+  font-family: Norse;
+  font-size: 52px;
   letter-spacing: 3px;
 }
-.home-page{
+.home-page {
   padding-left: 7px;
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: space-evenly;
-
 }
-.about-us{
-  color:rgb(252, 249, 249);
+.about-us {
+  color: rgb(252, 249, 249);
   font-size: 26px;
+  font-weight:500;
   line-height: 39px;
   font-family: Norse;
-  font-weight: 500;
- }
+  /* font-weight: 500; */
+}
 
- .dropdown-content {
+.auth-title {
+  color: whitesmoke;
+  font-family: Norse;
+  font-size: 52px;
+}
+
+.auth-reminder {
+  color: whitesmoke;
+}
+
+.sign-in-button {
+  background-color: whitesmoke;
+  height: 3vh;
+  width: 7vw;
+  margin-bottom: 10px;
+}
+
+.sign-in-button:active {
+  background-color: rgb(7, 214, 24);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.registration-link {
+  color: rgb(7, 214, 24);
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+.register-header-text {
+  color: whitesmoke;
+  font-family: Norse;
+  font-size: 39px;
+}
+
+.register-checkbox-text {
+  color: whitesmoke;
+}
+
+.register-button {
+  margin-top: 7px;
+}
+
+.register-button:active {
+  background-color: rgb(7, 214, 24);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.dropdown-content {
   background-color: rgb(253, 251, 251);
   min-width: 160px;
   padding: 12px 16px;
@@ -67,7 +114,6 @@ body{
   display: inline-block;
   z-index: 1;
   position: absolute;
-  
 }
 
 ul {
@@ -76,17 +122,16 @@ ul {
 }
 
 .swag {
- display: flex;
- flex-direction: column;
- width: 40vw;
- height: 78vh;
- align-items: center;
- justify-content: space-evenly;
- 
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  height: 78vh;
+  align-items: center;
+  justify-content: space-evenly;
 }
 .swag-descr {
   color: whitesmoke;
-  font-family: Carnivalee Freakshow;
+  font-family: Norse;
   font-size: 52px;
   letter-spacing: 2px;
   padding-top: 0;
@@ -94,16 +139,15 @@ ul {
 }
 .swag-image {
   height: 30vh;
-  width: 30vh
+  width: 30vh;
 }
 .swag-dropdown {
   width: 20vw;
   height: 26px;
 }
-.swag-color{
+.swag-color {
   width: 20vw;
   height: 26px;
-  
 }
 .sizes-box {
   width: 5vw;
@@ -116,32 +160,51 @@ ul {
   color: whitesmoke;
   font-size: 26px;
 }
-.hidden{
+.hidden {
   display: none;
 }
 
+.checkout-text {
+  color: whitesmoke;
+  font-size: 52px;
+  font-family: Norse;
+}
 
+.checkout-total {
+  color: whitesmoke;
+}
+
+.continueShopping {
+  margin-top: 26px;
+  height: 31px;
+  border-radius: 5px;
+}
+
+.continueShopping:active {
+  background-color: rgb(7, 214, 24);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 .cart-product-img {
   width: 10vw;
-  height: 10vh
+  height: 10vh;
 }
 
 .cart-product-info {
   display: flex;
   justify-items: left;
   align-items: center;
-  justify-content:left
- }
+  justify-content: left;
+}
 
 cart ul {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-
 }
 
-.cart-product-quantity-button{
+.cart-product-quantity-button {
   height: 50px;
   width: 50px;
   font-size: 16px;
@@ -152,15 +215,13 @@ cart ul {
   width: 100%;
   height: 40px;
   justify-content: flex-end;
-  align-items:center;
+  align-items: center;
   font-size: 18px;
-  
-
 }
 
-.stripeCheckout{
-  display:flex;
-  align-items:center;
+.stripeCheckout {
+  display: flex;
+  align-items: center;
   justify-content: center;
   justify-content: flex-start;
 }
@@ -175,7 +236,6 @@ cart ul {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 /* .edit-quantity-dropdown {
   width: 40px;
@@ -189,23 +249,20 @@ cart ul {
 
 } */
 
-
 .dropdown-item {
   border: none;
   font-size: 24px;
-  background-color: hsla(0,0%,100%,.8);
-  
+  background-color: hsla(0, 0%, 100%, 0.8);
 }
 
 .cart-item-remove-button {
   background-color: Transparent;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   border: none;
-  cursor:pointer;
-  overflow: hidden;  
+  cursor: pointer;
+  overflow: hidden;
   color: #0070c9;
   font-size: 17px;
-
 }
 
 .cart-quantity-options {
@@ -218,7 +275,6 @@ cart ul {
   align-items: center;
   justify-content: center;
   font-size: 27px;
-
 }
 
 .cart-product-color {
@@ -227,7 +283,7 @@ cart ul {
   align-items: center;
   justify-content: center;
   font-size: 27px;
-  color:whitesmoke
+  color: whitesmoke;
 }
 
 .cart-product-quantity {
@@ -236,7 +292,6 @@ cart ul {
   align-items: center;
   justify-content: center;
   color: #1d1d1f;
-
 }
 
 .cart-product-price {
@@ -245,22 +300,21 @@ cart ul {
   align-items: center;
   justify-content: center;
   color: #1d1d1f;
-  font-size: 27px
+  font-size: 27px;
 }
 
 .cart-remove-button {
   height: 50px;
   display: flex;
   align-items: center;
-  justify-content:left
-
+  justify-content: left;
 }
 
 .cart-review-text {
-  font-size: 40px;
+  font-size: 52px;
   padding-top: 20px;
-  color: rgb(7, 214, 24)
-
+  color: whitesmoke;
+  font-family: Norse;
 }
 
 .cart-return-text {
