@@ -9,7 +9,7 @@ import StripeCheckout from 'react-stripe-checkout';
 
 const Cart = (props) => {
   const { getCart } = props
-
+console.log(props)
 
   // const [quantity, setQuantity] = useState(1)
   const [cart, setCart] = useState([])
@@ -38,10 +38,10 @@ const Cart = (props) => {
     }
   }
 
-  const deleteProduct = async (productId) => {
+  const deleteProduct = async (colorId) => {
 
     try {
-      const cart = await axios.delete(`/api/cart/product/${productId}`)
+      const cart = await axios.delete(`/api/cart/product/${colorId}`)
       setCart(cart.data)
       props.getCart()
     } catch (error) {
@@ -63,7 +63,7 @@ const Cart = (props) => {
 
   const mappedCart = props.cart.cart.map((product) => {
     return <AddToCart
-      // key={product.product_id} 
+      key={product.product_id} 
       product={product}
       deleteProduct={deleteProduct}
       editQuantity={editQuantity}

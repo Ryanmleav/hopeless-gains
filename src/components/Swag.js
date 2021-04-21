@@ -24,7 +24,7 @@ function Swag(props) {
         setProductList(res.data)
 
         let id = res.data[0].product_id
-        console.log(id)
+        // console.log(id)
         axios.get(`/products/color/${id}`)
           .then((res) => {
             setColorList(res.data)
@@ -61,16 +61,16 @@ function Swag(props) {
       .then((res) => {
         console.log(res.data)
         // props.getCart();
-        props.history.push(`/api/cart/me`);
+        props.history.push(`/cart`);
       })
       .catch((err) => console.log(err));
   };
 
 
 
-  function selector() {
-    setSelect(true);
-  }
+  // function selector() {
+  //   setSelect(true);
+  // }
   const mappedProducts = productList.map((e) => {
     return <option key={e.product_id} value={e.product_id}>{e.product_name} ${e.product_price}</option>
   })

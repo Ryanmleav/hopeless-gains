@@ -8,6 +8,7 @@ const initialState = {
 const GET_CART = 'GET_CART';
 
 export function getCart() {
+  // console.log('slow')
   const cart = axios.get('/api/cart/me')
     .then(cart => cart.data)
   return {
@@ -24,7 +25,7 @@ export default function reducer(state = initialState, action) {
       return { ...state }
     case GET_CART + '_FULFILLED':
       return {
-        ...state,
+        
         cart_id: action.payload.cart_id,
         cart: action.payload
       }
