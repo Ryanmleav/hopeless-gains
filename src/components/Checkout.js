@@ -10,7 +10,7 @@ class Checkout extends Component {
   }
   onToken = (token) => {
     console.log(token);
-    console.log(this.props.cartTotal)
+    // console.log(this.props.cartTotal)
     token.card = void 0;
     axios.post('/api/checkout', { token, price: (this.props.cartTotal) })
       .then(response => {

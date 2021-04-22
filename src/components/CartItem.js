@@ -19,9 +19,6 @@ const CartItem= (
   const [quantity, setQuantity] = useState(props.product.quantity);
   const [priceChange, setPriceChange] = useState("");
 
-  // useEffect(() => {
-    // setPriceChange(props.product.product_price * quantity);
-  // }, [quantity]);
 
   useEffect(() => {
     // setQuantity(initialQuantity);

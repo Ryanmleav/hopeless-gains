@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { useEffect, useState } from "react";
 import { getCart } from "../redux/cartReducer";
 import axios from "axios";
-import AddToCart from "./CartItem";
 import { Link } from "react-router-dom";
 import StripeCheckout from "react-stripe-checkout";
 import CartItem from "./CartItem";
@@ -26,7 +25,7 @@ const Cart = (props) => {
   const deleteProduct = async (color_id) => {
     try {
       const cart = await axios.delete(`/api/cart/product/${color_id}`);
-      // setCart(cart.data);
+     
       props.getCart();
     } catch (error) {
       console.log(error);
@@ -35,7 +34,6 @@ const Cart = (props) => {
   };
 
   useEffect(() => {
-    // console.log("HIT");
     props.getCart();
   }, []);
 
