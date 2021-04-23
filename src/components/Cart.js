@@ -25,7 +25,7 @@ const Cart = (props) => {
   const deleteProduct = async (color_id) => {
     try {
       const cart = await axios.delete(`/api/cart/product/${color_id}`);
-     
+
       props.getCart();
     } catch (error) {
       console.log(error);
@@ -80,7 +80,7 @@ const Cart = (props) => {
           <StripeCheckout
             description={"Hopeless Gains checkout"}
             token={onToken}
-            stripeKey={process.env.REACT_APP_PUB_KEY}
+            stripeKey="pk_test_51Ie3gNHGyGBO6n8RUA1x7LIU5eFgAmn02IYwg8kA7hnyidX4hEiH6mDA9IWfDVc8HIidWH4XeBzAsxqKHpaXoz1600qenklH91"
             amount={props.cartTotal}
           />
         </Link>

@@ -9,7 +9,7 @@ const cartCtrl = require("./controllers/cart");
 const emailCtrl = require("./controllers/email");
 const { checkUser } = require("./controllers/middleware");
 const stripeCtrl = require("./controllers/stripe");
-const stripe = require("stripe")(SECRET_KEY);
+
 const path = require("path");
 
 const {
@@ -18,6 +18,8 @@ const {
   SESSION_SECRET,
   SECRET_KEY,
 } = process.env;
+
+const stripe = require("stripe")(SECRET_KEY);
 
 const app = express();
 

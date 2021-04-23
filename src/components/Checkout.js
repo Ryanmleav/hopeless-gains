@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import StripeCheckout from "react-stripe-checkout"
 import axios from "axios"
 import React, { Component } from 'react'
+const { REACT_APP_SECRET_KEY } = process.env
 
 
 class Checkout extends Component {
@@ -16,10 +17,12 @@ class Checkout extends Component {
       .then(response => {
         alert('Transaction Successful')
       }).catch((err) => console.log(err))
-  }
-
-  render() {
-    return (
+    }
+    
+    render() {
+      console.log(REACT_APP_SECRET_KEY)
+      return (
+      
       <div className='checkout-component'>
         <header>
           <h3 className='checkout-text'>Checkout</h3>
@@ -31,7 +34,7 @@ class Checkout extends Component {
           <StripeCheckout
             description={"Hopeless Gains demo"}
             token={this.onToken}
-            stripeKey={process.env.REACT_APP_PUB_KEY}
+            stripeKey={'pk_test_51Ie3gNHGyGBO6n8RUA1x7LIU5eFgAmn02IYwg8kA7hnyidX4hEiH6mDA9IWfDVc8HIidWH4XeBzAsxqKHpaXoz1600qenklH91'}
             amount={(this.props.cartTotal)}
           />
         </div>

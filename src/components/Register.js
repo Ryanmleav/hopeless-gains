@@ -51,7 +51,7 @@ const Register = ({ getUser }) => {
           Create Your Hopeless Gains Account{" "}
         </h1>
       </div>
-      <form onSubmit={(e) => registerUser(e)}>
+      <form className='register-input'onSubmit={(e) => registerUser(e)}>
         <div className="register-form-text"></div>
         <div className="register-name-input">
           <input
